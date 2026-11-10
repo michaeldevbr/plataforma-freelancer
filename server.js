@@ -1,24 +1,23 @@
 const express = require('express');
 const app = express();
+const projetos = require('./repository');
 
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send("Esta é uma plataforma freelancer onde qualquer pessoa pode se cadastrar e comprar e vender produtos");
+    res.send("Esta é uma plataforma freelancer onde qualquer pessoa pode se cadastrar e comprar e vender seus projetos ou produtos");
 });
 
-app.get('/usuarios', (req, res) => {
-    res.send("Usuários cadastrados.");
+app.get('/projetos', (req, res) => {
+    res.json(projetos.listar_projetos());
 });
 
-app.get('/produtos', (req, res) => {
-    res.send("Produtos cadastrados.");
-});
+app.post('/projetos', (req, res) => {
+    const projeto = req.body["projeto"];
 
-app.post('/usuarios', (req, res) => {
-    var nome = req.body["nome"];
+    const mensagem = projetos.cadastrar_projeto(projeto);
 
-    res.status(201).send("Usuário " + nome + " cadastrado com sucesso!");
+    res.status(201).json(mensagem);
 });
 
 app.listen(3000, () => {
