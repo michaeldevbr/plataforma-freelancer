@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const projetos = require('./repository');
+const projetos = require('./service');
 
 app.use(express.json());
 
@@ -13,11 +13,15 @@ app.get('/projetos', (req, res) => {
 });
 
 app.post('/projetos', (req, res) => {
+    try {
     const projeto = req.body["projeto"];
 
     const mensagem = projetos.cadastrar_projeto(projeto);
 
     res.status(201).json(mensagem);
+    } catch (erro) {
+        res.status(400).json({"erro": erro.message});
+    };
 });
 
 app.listen(3000, () => {
