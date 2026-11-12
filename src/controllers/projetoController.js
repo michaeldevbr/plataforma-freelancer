@@ -1,4 +1,4 @@
-const projetos_service = require('../services/service');
+const projetos_service = require('../services/projetoService');
 
 function apresentar_sistema(req, res) {
     return res.json("Esta é uma plataforma freelancer onde qualquer pessoa pode se cadastrar e comprar e vender seus projetos ou produtos");

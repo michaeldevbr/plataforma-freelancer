@@ -1,4 +1,4 @@
-const projetos = require('../repositories/repository.js');
+const projetos_repository = require('../repositories/projetoRepository.js');
 
 module.exports = {
     cadastrar_projeto(projeto) {
@@ -13,9 +13,9 @@ module.exports = {
             throw new Error("O nome do projeto não pode ser apenas números ou símbolos.");
         };
 
-        return projetos.cadastrar_projeto(projeto.trim());
+        return projetos_repository.cadastrar_projeto(projeto.trim());
     },
     listar_projetos() {
-        return projetos.listar_projetos();
+        return projetos_repository.listar_projetos();
     }
 };
