@@ -5,6 +5,10 @@
 
   "main": "src/server.js",
 
+  "name": "plataforma-freelancer",
+
+  "version": "1.0.0",
+
   "scripts": {
     "start": "node src/server.js"
   }
