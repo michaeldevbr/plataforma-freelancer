@@ -1,0 +1,25 @@
+{
+  "name": "plataforma-freelancer",
+  "version": "1.0.0",
+  "description": "Uma plataforma freelancer",
+  "main": "index.js",
+  "dependencies": {
+    "better-sqlite3": "^13.1.1",
+    "node-addon-api": "^8.9.2"
+  },
+  "scripts": {
+    "test": "node --test src/repositories/repository.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeldevbr/plataforma-freelancer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/michaeldevbr/plataforma-freelancer/issues"
+  },
+  "homepage": "https://github.com/michaeldevbr/plataforma-freelancer#readme"
+}
