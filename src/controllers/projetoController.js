@@ -1,16 +1,16 @@
-const projetos_service = require('../services/projetoService');
+const projetosService = require('../services/projetoService');
 
-function apresentar_sistema(req, res) {
+function apresentarSistema(req, res) {
     return res.json("Esta é uma plataforma freelancer onde qualquer pessoa pode se cadastrar e comprar e vender seus projetos ou produtos");
 }
 
 function listar(req, res) {
-    return res.json(projetos_service.listar_projetos());
+    return res.json(projetosService.listarProjetos());
 }
 
 function cadastrar(req, res) {
     try {
-        const mensagem = projetos_service.cadastrar_projeto(req.body["projeto"]);
+        const mensagem = projetosService.cadastrarProjeto(req.body["projeto"]);
 
         return res.status(201).json(mensagem);
     } catch (erro) {
@@ -18,4 +18,4 @@ function cadastrar(req, res) {
     }
 }
 
-module.exports = {apresentar_sistema, listar, cadastrar};
+module.exports = {apresentarSistema, listar, cadastrar};

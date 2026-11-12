@@ -1,11 +1,11 @@
 const projetos = [];
 
 module.exports = {
-    cadastrar_projeto(projeto) {
+    cadastrarProjeto(projeto) {
             projetos.push(projeto);
             return "Projeto '" + projeto + "' foi cadastrado com sucesso!"; 
         },
-    listar_projetos() {
+    listarProjetos() {
         return projetos;
     }
 };

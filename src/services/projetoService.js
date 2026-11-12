@@ -1,21 +1,21 @@
-const projetos_repository = require('../repositories/projetoRepository.js');
+const projetosRepository = require('../repositories/projetoRepository');
 
 module.exports = {
-    cadastrar_projeto(projeto) {
+    cadastrarProjeto(projeto) {
         
         if(typeof projeto !== "string" || !projeto.trim()){
             throw new Error("O projeto deve ter um nome.");
-        };
+        }
 
-        const validar_projeto = /\p{L}/u; //procedimento chamado de regex
+        const possuiLetra = /\p{L}/u;
 
-        if(!validar_projeto.test(projeto)) {
+        if(!possuiLetra.test(projeto)) {
             throw new Error("O nome do projeto não pode ser apenas números ou símbolos.");
-        };
+        }
 
-        return projetos_repository.cadastrar_projeto(projeto.trim());
+        return projetosRepository.cadastrarProjeto(projeto.trim());
     },
-    listar_projetos() {
-        return projetos_repository.listar_projetos();
+    listarProjetos() {
+        return projetosRepository.listarProjetos();
     }
 };
