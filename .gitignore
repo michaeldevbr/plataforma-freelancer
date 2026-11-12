@@ -137,5 +137,4 @@ dist
 venv/
 __pycache__/
 *.png
-
 banco.db
