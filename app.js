@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const projetos = require('./service');
+const projetos = require('./src/services/service.js');
 
 app.use(express.json());
 

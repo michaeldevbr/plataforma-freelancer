@@ -1,6 +1,6 @@
-const projetos = require('./repository');
+const projetos = require('../repositories/repository.js');
 
-module.exports ={
+module.exports = {
     cadastrar_projeto(projeto) {
         
         if(typeof projeto !== "string" || !projeto.trim()){
