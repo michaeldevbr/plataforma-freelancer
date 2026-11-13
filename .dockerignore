@@ -1,0 +1,11 @@
+node_modules/
+.gitignore
+.gitattributes
+.git
+LICENSE
+README.md
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.sqlite
+*.db
