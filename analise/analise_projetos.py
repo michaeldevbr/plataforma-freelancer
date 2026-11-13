@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 import matplotlib.pyplot as plt
 
-CAMINHO_BANCO = "../banco.db"
+CAMINHO_BANCO = "../db/banco.db"
 
 conn = sqlite3.connect(CAMINHO_BANCO)
 df = pd.read_sql("SELECT * FROM projetos", conn)

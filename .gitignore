@@ -3,5 +3,5 @@ venv/
 *.png
 banco.db
 *.sqlite
-*.db
+db/*.db
 limparBanco.js

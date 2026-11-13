@@ -4,7 +4,7 @@ from pathlib import Path
 PASTA_ANALISE = Path(__file__).resolve().parent
 RAIZ = PASTA_ANALISE.parent
 CAMINHO_SCHEMA = RAIZ / "db" / "schema.sql"
-CAMINHO_BANCO = RAIZ / "banco.db"
+CAMINHO_BANCO = RAIZ / "db" / "banco.db"
 
 def criar_banco():
     conn = sqlite3.connect(CAMINHO_BANCO)

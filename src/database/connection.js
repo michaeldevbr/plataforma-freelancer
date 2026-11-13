@@ -4,7 +4,7 @@ const Database = require("better-sqlite3");
 
 const RAIZ = path.join(__dirname, "..", "..");
 const CAMINHO_SCHEMA = path.join(RAIZ, "db", "schema.sql");
-const CAMINHO_BANCO_PADRAO = path.join(RAIZ, "banco.db");
+const CAMINHO_BANCO_PADRAO = path.join(RAIZ, "db", "banco.db");
 
 function abrirBanco(caminho = CAMINHO_BANCO_PADRAO) {
     const db = new Database(caminho);
