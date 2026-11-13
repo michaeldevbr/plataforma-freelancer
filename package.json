@@ -2,13 +2,15 @@
   "name": "plataforma-freelancer",
   "version": "1.0.0",
   "description": "Uma plataforma freelancer",
-  "main": "index.js",
+  "main": "src/server.js",
   "dependencies": {
+    "express": "^5.3.0",
     "better-sqlite3": "^13.1.1",
     "node-addon-api": "^8.9.2"
   },
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,4 +24,5 @@
     "url": "https://github.com/michaeldevbr/plataforma-freelancer/issues"
   },
   "homepage": "https://github.com/michaeldevbr/plataforma-freelancer#readme"
+
 }
