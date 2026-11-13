@@ -1,9 +1,13 @@
-const projetosRepository = require('../repositories/projetoRepository');
+const ProjetoRepository = require('../repositories/projetoRepository');
+const {abrirBanco} = require('../database/connection');
+
+const db = abrirBanco();
+const projetoRepository = new ProjetoRepository(db);
 
 module.exports = {
-    cadastrarProjeto(projeto) {
+    async cadastrarProjeto(projeto) {
         
-        if(typeof projeto !== "string" || !projeto.trim()){
+        if(!projeto || typeof projeto !== "object"){
             throw new Error("O projeto deve ter um nome.");
         }
 
@@ -13,9 +17,9 @@ module.exports = {
             throw new Error("O nome do projeto não pode ser apenas números ou símbolos.");
         }
 
-        return projetosRepository.cadastrarProjeto(projeto.trim());
+        return await projetoRepository.criar(projeto);
     },
-    listarProjetos() {
-        return projetosRepository.listarProjetos();
+    async listarProjetos(filtros = {}) {
+        return await projetoRepository.listar(filtros);
     }
 };

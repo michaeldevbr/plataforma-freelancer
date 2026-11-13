@@ -1,7 +1,7 @@
 node_modules/
 venv/
-__pycache__/
 *.png
 banco.db
 *.sqlite
 *.db
+limparBanco.js
