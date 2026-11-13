@@ -5,4 +5,4 @@ Uma plataforma freelancer voltada para usuários que buscam apresentar seus proj
 
 - Integrantes da equipe: Michael de Sousa Santos, Cézar Augusto Ferreira De Almeida, Gabriel Gomes Souza
 
-- Ferramentas utilizadas: Node.js, Express, Python, Docker, SQLite
+- Ferramentas utilizadas: Node.js, Express, Python, Pandas, Docker, SQLite

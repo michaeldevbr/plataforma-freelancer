@@ -1,3 +1,7 @@
 node_modules/
+venv/
+*.png
+banco.db
 *.sqlite
 *.db
+limparBanco.js
