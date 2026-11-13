@@ -9,7 +9,7 @@
     "node-addon-api": "^8.9.2"
   },
   "scripts": {
-    "test": "node --test",
+    "test": "node --env-file=.env.test --test",
     "start": "node src/server.js"
   },
   "repository": {
@@ -18,7 +18,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/michaeldevbr/plataforma-freelancer/issues"

@@ -1,6 +1,6 @@
 node_modules/
 venv/
-*.png
+analise/*.png
 banco.db
 *.sqlite
 db/*.db

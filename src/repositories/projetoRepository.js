@@ -10,7 +10,7 @@ const COLUNAS = `
     criado_em
 `;
 
-class projetoRepository {
+class ProjetoRepository {
 
     constructor(db) {
         this.db = db;
@@ -74,4 +74,4 @@ class projetoRepository {
     }
 }
 
-module.exports = projetoRepository;
+module.exports = ProjetoRepository;
